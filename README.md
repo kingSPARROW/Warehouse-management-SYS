@@ -1,51 +1,51 @@
-## Oswa - inv
+# Warehouse Inventory System
 
+Welcome to the Warehouse Inventory System project! This system aims to help manage and track various aspects of a warehouse's inventory, including products, gummies, packed boxes, and drying information. The system is built using PHP, MySQL, and other web technologies.
 
-![OSWA-INV v2 image](https://scontent-iad3-1.xx.fbcdn.net/v/t31.0-8/12045296_896994067005023_5505146103193104549_o.jpg?oh=4afd029c1486604d29f672d76becb8bc&oe=5921F70A " Warehouse inventory system ")
-#Warehouse inventory system
-- - - -
+## Table of Contents
 
-The application was initially created by **Siamon Hasan**, useing [php](http:php.net), [mysql](https://www.mysql.com) and [bootstrap](http://getbootstrap.com).
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Database Structure](#database-structure)
+- [Contributing](#contributing)
+- [License](#license)
 
+## Features
 
-OSWA-INV is a web based Inventory System, that will allow you to keep tracking of the quantity buying and selling price of the products existing in your warehouse or business. When creating a new products, you can set a quantity,buying and selling price.
+- Add, edit, and delete products in the warehouse.
+- Store information about different types of gummies.
+- Record details of packed boxes including products and employees.
+- Track drying information for gummies with tray IDs and drying times.
 
-****
+## Installation
 
-If you find any bug, and a fix for that bug, please leave a comment on the github page for this project and i will push the change into the master branch.
+1. Clone this repository to your web server's root directory.
+2. Create a MySQL database for the project and import the SQL file (`database.sql`) provided in the `sql` directory.
+3. Configure the database connection by editing the `includes/config.php` file with your database credentials.
+4. Make sure to install the required dependencies, such as the `Picqer\Barcode\BarcodeGeneratorPNG` library using Composer.
 
+```bash
+composer install
+Usage
+Access the system through your web browser by navigating to http://your-server-address/warehouse-inventory-system.
 
-### Installing this application is fairly easy, just follow these steps:
-****
+Log in using appropriate user credentials (various user levels are supported).
 
+Use the navigation menu to access different sections of the system: Products, Gummies, Packed Boxes, and Drying.
 
-1. Download the latest version with git (`git clone https://github.com/siamon123/warehouse-inventory-system.git`)
+Add, edit, or delete data as needed using the provided forms and interfaces.
 
-2. Import/load oswa_inv.sql into your mysql database. This should set up the basic structure of the database system.
+Database Structure
+The project's database includes the following tables:
 
-3. Modify the includes/config.php and change the variables to match your host, database, username and passwords.
+products: Store information about different products.
+gummies: Record details about different gummy products.
+packed_box: Track packed boxes with employee, product, and quantity information.
+drying: Store drying information for gummies, including tray IDs and drying times.
+batches_gummies: Record batches associated with gummies, including batch numbers and sizes.
+Contributing
+Contributions to this project are welcome! If you find any issues or want to add new features, feel free to open an issue or submit a pull request.
 
-4. Change all Folder permission inside uploads folder either add them to group call `www` if available or `777`.
-
-5. Then loging by typing **username** and **password**:
-
-
-   Administrator        | Special User           | Default User
-   ---------------------| -----------------------| -------------------
-   **Username** : admin | **Username** : special | **Username** : user
-   **Password** : admin | **Password** : special | **Password** : user
-
-6. Good luck!  
-
-- - - -
-
-## DON'T FORGET TO GIVE US FEEDBACK
-
-- - - -
-
-Like  [@OSWA](https://www.facebook.com/oswapp) on Facebook for more project.
-
-Don't forget to visit [oswapp.com](http://oswapp.com "OSWA")
-"# Warehouse-management" 
-"# Warehouse-management-SYS" 
-"# Warehouse-management-SYS" 
+License
+This project is licensed under the MIT License.

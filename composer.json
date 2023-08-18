@@ -1,0 +1,7 @@
+{
+    "require": {
+        "picqer/php-barcode-generator": "^2.3",
+        "zendframework/zend-barcode": "^2.5",
+        "baraja-core/php-pdf-to-image": "^2.0"
+    }
+}
